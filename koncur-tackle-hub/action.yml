@@ -89,6 +89,7 @@ runs:
       shell: bash
       working-directory: koncur
       env:
+        OPERATOR_REF: ${{ inputs.ref }}
         RUNNER_IMG: ${{ env.RUNNER_IMG }}
         JAVA_PROVIDER_IMG: ${{ env.JAVA_PROVIDER_IMG }}
         CSHARP_PROVIDER_IMG: ${{ env.CSHARP_PROVIDER_IMG }}
