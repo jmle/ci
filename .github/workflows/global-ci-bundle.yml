@@ -541,7 +541,7 @@ jobs:
       - name: Run Koncur Hub tests
         uses: ./koncur-tackle-hub
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.ref || 'main' }}
           koncur_ref: ${{ needs.extract-koncur-ref.outputs.koncur_ref }}
           skip_maven: ${{ inputs.koncur_skip_maven }}
 
